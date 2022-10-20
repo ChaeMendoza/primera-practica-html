@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
     <title>Tacos Launch X</title>
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
+    <!-- Header -->
     <section>
         <header>
             <h3 class="title">🥰 TACOS LAUNCH X 🤩</h3>
         </header>
         <hr>
-        <div class="center">
-            <img src="./src/img/logo.png" alt="Logo de Tacos Launch X">
+        <div class="images">
+            <img class="taco1" src="./src/img/taco.png" alt="Taco Mexicano">
+            <img class="logo" src="./src/img/logo.png" alt="Logo de Tacos Launch X">
+            <img class="taco2" src="./src/img/taco2.png" alt="Taco Mexicano grande">
         </div>
     </section>
+    <!-- Menú -->
     <section>
         <h2>Menú</h2>
         <div class="container">
@@ -24,50 +29,50 @@
                 <h3>Tacos Grandes</h3>
                 <p>Todos incluyen maples con cebolla</p>
                 <ul>
-                    <li>Bistec ......... $30</li>
-                    <li>Chorizo ........ $32</li>
-                    <li>Chuleta ........ $33</li>
-                    <li>Pastor  .......... $20</li>
-                    <li>Caperuzados ... $25</li>
+                    <li>Bistec .............................................................. <span>$30</span></li>
+                    <li>Chorizo ......................................................... <span>$32</span></li>
+                    <li>Chuleta ........................................................ <span>$33</span></li>
+                    <li>Pastor ............................................................ <span>$20</span></li>
+                    <li>Caperuzados .......................................... <span>$25</span></li>
                 </ul>
             </div>
             <div class="container-box">
                 <h3>Tacos Pequeños</h3>
                 <p>Con cilantro y cebolla</p>
                 <ul>
-                    <li>Bistec ........ $15</li>
-                    <li>Chorizo ........ $11</li>
-                    <li>Chuleta ........ $12</li>
-                    <li>Pastor  ........ $10</li>
-                    <li>Caperuzados ... $10</li>
+                    <li>Bistec .............................................................. <span>$15</span></li>
+                    <li>Chorizo ......................................................... <span>$11</span></li>
+                    <li>Chuleta ......................................................... <span>$12</span></li>
+                    <li>Pastor ............................................................. <span>$10</span></li>
+                    <li>Caperuzados ........................................... <span>$10</span></li>
                 </ul>
             </div>
             <div class="container-box">
                 <h3>Tacos Especiales</h3>
                 <p>Haz tu combo con refresco por $19 más</p>
                 <dl>
-                    <dt><strong>Labrador</strong> ....... $40</dt>
+                    <dt><strong>Labrador</strong> ...................................................................... <span>$40</span></dt>
                     <dd>-Tortilla frita con salsa, rellena de pollo.</dd>
-                    <dt><strong>Pastor Alemán</strong> ....... $39</dt>
+                    <dt><strong>Pastor Alemán</strong> ........................................................ <span>$39</span></dt>
                     <dd>- Bolillo de frijoles y queso</dd>
-                    <dt><strong>Pug</strong> ........ $38</dt>
+                    <dt><strong>Pug</strong> ...................................................................................... <span>$38</span></dt>
                     <dd>Tortilla de maíz con chuleta</dd>
-                    <dt><strong>Adoptado</strong> ....... $45</dt>
+                    <dt><strong>Adoptado</strong> ..................................................................... <span>$45</span></dt>
                     <dd>- Tortilla de maíz con Pastor</dd>
                 </dl>
             </div>
         </div>
     </section>
-
     <hr>
+    <!-- Ubicación -->
     <section>
         <h2>Ubicación</h2>
         <h3>Sucursales</h3>
         <table class="center table">
             <tr>
-                <th id="name">Nombre</th>
-                <th id="address">Ubicación</th>
-                <th id="schedule">Horarios</th>
+                <th class="table-title" id="name">Nombre</th>
+                <th class="table-title"  id="address">Ubicación</th>
+                <th class="table-title"  id="schedule">Horarios</th>
             </tr>
 
             <tr>
@@ -95,53 +100,87 @@
             </tr>
         </table>
     </section>
-
     <hr>
+    <!-- Pedidos -->
     <section>
         <h2>Pedidos</h2>
         <h3>haz tu pedido aquí</h3>
-        <form>
-            <label for="sector">De que taquería quieres?</label>
-            <select id="sector">
-                <option value="norte">Norte</option>
-                <option value="centro">Centro</option>
-                <option value="sur">Sur</option>
-            </select>
+        <div class="center">
+            <form>
+                <div class="option">
+                    <label class="label" for="sector">De que taquería quieres?</label>
+                    <select class="select" id="sector">
+                        <option value="escoge" disabled>Escoge de donde quieres pedir</option>
+                        <option value="norte">Norte</option>
+                        <option value="centro">Centro</option>
+                        <option value="sur">Sur</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label class="label">De que sabor quieres?</label>
+                    <div class="option-input">
+                        <div>
+                            <input type="checkbox" id="bistec" name="bistec" value="Bistec"><label for="bistec">Bistec</label>
+                            <input class="short-input" type="number" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chorizo" name="Chorizo" value="Chorizo"><label for="chorizo">Chorizo</label>
+                            <input class="short-input" type="number" id="chorizoNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="chuleta" name="Chuleta" value="Chuleta"><label for="chuleta">Chuleta</label>
+                            <input class="short-input" type="number" id="chuletaNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pastor" name="Pastor" value="Pastor"><label for="pastor">Pastor</label>
+                            <input class="short-input" type="number" id="pastorNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="caperuzados" name="Caperuzados" value="Caperuzados"><label for="caperuzados">Caperuzados</label>
+                            <input class="short-input" type="number" id="caperuzadosNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="labrador" name="Labrador" value="Labrador"><label for="labrador">Labrador</label>
+                            <input class="short-input" type="number" id="labradorNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pastorAleman" name="Pastor Alemán" value="Pastor Alemán"><label for="pastorAleman">Pastor Alemán</label>
+                            <input class="short-input" type="number" id="pastorAlemanNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pug" name="Pug" value="Pug"><label for="pug">Pug</label>
+                            <input class="short-input" type="number" id="pugNumber" placeholder="¿Cuántos?">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="adoptado" name="Adoptado" value="Adoptado"><label for="adoptado">Adoptado</label>
+                            <input class="short-input" type="number" id="adoptadoNumber" placeholder="¿Cuántos?">
+                        </div>
+                    </div>
+                </div>
+                <div class="option">
+                    <label class="label" for="nombre">Nombre:</label>
+                    <input type="text" name="name" id="nombre">
+                </div>
+                <div class="option">
+                    <label class="label" for="teléfono">Teléfono:</label>
+                    <input type="text" name="teléfono" id="teléfono">
+                </div>
+                <div class="option">
+                    <label class="label" for="direction">Dirección:</label>
+                    <input type="text" name="direction" id="direction">
+                </div>
 
-            <label>De que sabor quieres?</label>
-            <input type="checkbox" id="bistec" name="bistec" value="Bistec"><label for="bistec">Bistec</label>
-            <input type="number" placeholder="¿Cuántos?">
-            <input type="checkbox" id="chorizo" name="Chorizo" value="Chorizo"><label for="chorizo">Chorizo</label>
-            <input type="number" id="chorizoNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="chuleta" name="Chuleta" value="Chuleta"><label for="chuleta">Chuleta</label>
-            <input type="number" id="chuletaNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="pastor" name="Pastor" value="Pastor"><label for="pastor">Pastor</label>
-            <input type="number" id="pastorNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="caperuzados" name="Caperuzados" value="Caperuzados"><label for="caperuzados">Caperuzados</label>
-            <input type="number" id="caperuzadosNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="labrador" name="Labrador" value="Labrador"><label for="labrador">Labrador</label>
-            <input type="number" id="labradorNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="pastorAleman" name="Pastor Alemán" value="Pastor Alemán"><label for="pastorAleman">Pastor Alemán</label>
-            <input type="number" id="pastorAlemanNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="pug" name="Pug" value="Pug"><label for="pug">Pug</label>
-            <input type="number" id="pugNumber" placeholder="¿Cuántos?">
-            <input type="checkbox" id="adoptado" name="Adoptado" value="Adoptado"><label for="adoptado">Adoptado</label>
-            <input type="number" id="adoptadoNumber" placeholder="¿Cuántos?">
-
-
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="name" id="nombre">
-
-            <label for="teléfono">Teléfono:</label>
-            <input type="text" name="teléfono" id="teléfono">
-
-            <label for="direction">Dirección:</label>
-            <input type="text" name="direction" id="direction">
-
-            <button type="submit">Enviar Pedido</button>
-        </form>
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
     </section>
-
+    <hr>
+    <!-- Footer -->
+    <section>
+        <footer>
+            Hecho con amor por Israel Mendoza
+        </footer>
+    </section>
 
 </body>
 </html>

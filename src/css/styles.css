@@ -2,30 +2,66 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background: #F6CE92;
+    background: url("../img/fondo-body.png") no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
 h2 {
     color: #723800;
+    filter: drop-shadow(5px 5px 5px #424242);
     text-align: center;
 }
 
 h3 {
     color: #303091;
+    filter: drop-shadow(5px 5px 5px #424242);
     text-align: center;
 }
+
+span {
+    font-size: 18px;
+}
+
 img {
     width: 300px;
     height: 300px;
 }
 .title {
-    color: rgb(0, 0, 0);
+    color: #723800;
+    filter: drop-shadow(5px 5px 5px #424242);
 }
 
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.images {
+    background-image: url("../../src/img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.taco1 {
+    filter: drop-shadow(5px 5px 5px #b6b5b5);
+    width: 200px;
+    height: 200px;
+}
+
+.logo {
+    filter: drop-shadow(5px 5px 5px #ffffff);
+}
+
+.taco2 {
+    filter: drop-shadow(5px 5px 5px #bbbaba);
+    width: 200px;
+    height: 200px;
 }
 
 /* Menú */
@@ -41,9 +77,71 @@ img {
     border: 2px solid #ad5f0a;
     border-radius: 15px;
     padding: 20px;
+    width: 330px;
+    height: 220px;
 }
 
 /* Ubicación */
 th {
+    background: rgba(255, 251, 0, 0.2);
     border: 2px solid #ad5f0a;
+    padding: 10px;
+}
+
+.table-title {
+    color: #ad5f0a;
+    filter: drop-shadow(2px 2px 2px #424242);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Pedidos */
+form {
+    background: rgba(255, 251, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ad5f0a;
+    border-radius: 20px;
+    width: 500px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.option-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.short-input {
+    width: 80px;
+}
+
+.label {
+    color: #723800;
+    font-weight: bold;
+    font-size: 18px;
+}
+.box {
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid #723800;
+}
+
+.select {
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid #723800;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.35);
+    border: 2px solid #723800;
 }
