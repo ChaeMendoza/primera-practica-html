@@ -20,3 +20,5 @@
 <ul>
   <li>CSS</li>
 </ul>
+  
+ <h6>Proyecto no-responsivo!</h6>
